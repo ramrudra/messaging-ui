@@ -1,5 +1,7 @@
 # messaging-ui repo
 
+All the relevant components should be here.  Note that for development, the `tab` is fixed by a `prop` in all of the `messages: *` stories, so clicking another tab will not change the content.
+
 ### Scripts
 
 `npm start` - This will start the `react-storybook` server with hot-reloading.
