@@ -1,3 +1,12 @@
 # messaging-ui repo
 
-This repo contains demos (on the `gh-pages` branch) for the component I'm currently looking for a developer to build. Once a developer is found, the repo will be private, and the source code will be added.
+### Scripts
+
+`npm start` - This will start the `react-storybook` server with hot-reloading.
+
+`npm test` - This will run `jest`
+
+### Firebase
+The firebase config details are located in `firebaseConfig.js` in the root directory.
+
+

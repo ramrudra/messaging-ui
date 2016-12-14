@@ -1,0 +1,25 @@
+[ignore]
+.*/node_modules/react-tap-event-plugin/.*
+.*/node_modules/react-experiments/.*
+.*/node_modules/fbjs/.*
+.*/node_modules/editions/.*
+.*/node_modules/react-swipeable-views/.*
+.*/node_modules/babel-plugin-flow-react-proptypes/.*
+.*/tests/.*
+[include]
+
+[libs]
+node_modules/immutable/dist/immutable.js.flow
+src/lib/flow-types/
+
+[options]
+#  for es6 arrow function class props
+esproposal.class_instance_fields=enable
+# defaultprops as static prop required by flow
+# https://github.com/facebook/flow/issues/1594
+esproposal.class_static_fields=enable
+# adjust for root resolve making our local imports look like node imports
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+# ignore errors thrown by redux flow-typed defs
+suppress_type=$ObjMap

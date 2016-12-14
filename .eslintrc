@@ -1,0 +1,69 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react",
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "import",
+    "promise",
+    "flowtype"
+  ],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "__DEV__": false,
+    "__TEST__": false,
+    "__PROD__": false,
+    "__STAGE__": false,
+    "__COVERAGE__": false
+  },
+  "rules": {
+    "space-before-function-paren": 0,
+    "key-spacing": 0,
+    "jsx-quotes": [
+      2,
+      "prefer-single"
+    ],
+    "max-len": [
+      2,
+      120,
+      2
+    ],
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "comma-dangle": "off",
+    "prefer-template": "off",
+    "arrow-body-style": "off",
+    "no-use-before-define": "off",
+    "global-require": "off",
+    "no-console": "off", // webpack will strip our console statements
+    "new-cap": "off",
+    "no-lone-blocks": "off",
+    "react/jsx-filename-extension": "off",
+    // b/c we're resolving import paths so we can type
+    // absolute paths, eslint thinks our abs. paths are npm mods
+    "import/no-extraneous-dependencies": "off",
+    "class-methods-use-this": [
+      1,
+      {
+        "exceptMethods": [
+          "getStyles"
+        ]
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "jsx-a11y/img-redundant-alt": "off",
+  }
+}
