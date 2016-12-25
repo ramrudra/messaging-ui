@@ -4,6 +4,7 @@ import { Tabs, Tab } from 'material-ui/Tabs'
 import NotesList from '../NotesList'
 import FeatureIconGroup from '../FeatureIcons/FeatureIconGroup.jsx'
 import FeatureRow from '../FeatureIcons/FeatureRow.jsx'
+import MessagingForm from '../MessagingUi/MessagingForm'
 
 type Props = {
   trackCardTabClicked: Function,
@@ -30,6 +31,7 @@ const ListingTabs = (props: Props) => {
       {/*note that Tabs' value prop is mostly for dev purposes. if undefined, tabs are uncontrolled*/}
       <Tab
         label='Info'
+        value="Info"
         onActive={handleTabClick}
         >
         <FeatureIconGroup
@@ -47,6 +49,7 @@ const ListingTabs = (props: Props) => {
       </Tab>
       <Tab
         label='Notes'
+        value="Notes"
         onActive={handleTabClick}
         >
 
@@ -65,10 +68,7 @@ const ListingTabs = (props: Props) => {
         onActive={handleTabClick}
         >
         <div style={{ textAlign: 'center' }}>
-          <img
-            height={120}
-            src={require('static/feature-not-ready.svg')}
-            />
+          <MessagingForm />
         </div>
       </Tab>
     </Tabs>
